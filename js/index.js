@@ -201,10 +201,12 @@
   /* 模块六 自动切换 */
   var as = document.querySelector('.filter').querySelectorAll('a');
   var orderData = document.querySelectorAll('.orderData');
+  var timer = null;
+  var index = 0;
   for (var i = 0; i < as.length; i++) {
     as[i].setAttribute('index', i);
     as[i].onclick = function () {
-      var index = this.getAttribute('index');
+      index = this.getAttribute('index');
       // console.log(index);
       for (var j = 0; j < as.length; j++) {
         as[j].classList.remove('active');
@@ -217,28 +219,23 @@
     }
   };
   var content6 = document.querySelector('.content6');
-
   function auto() {
-
     // 自动
-    var timer = null;
-    var ind = 0;
     timer = setInterval(function () {
-      ind++;
-      if (ind >= orderData.length) {
-        ind = 0;
+      index++;
+      if (index >= orderData.length) {
+        index = 0;
       }
-      as[ind].click();
+      as[index].click();
     }, 1500);
 
-    // 进入到第六模块自动切换暂停
-    // 找到第六模块元素
-    content6.onmouseenter = function () {
-      clearInterval(timer);
-    };
   };
   auto();
-
+  // 进入到第六模块自动切换暂停
+  // 找到第六模块元素
+  content6.onmouseenter = function () {
+    clearInterval(timer);
+  };
   content6.onmouseleave = function () {
     auto();
   }
@@ -377,7 +374,7 @@
   for (var i = 0; i < as.length; i++) {
     as[i].setAttribute('index', i);
     as[i].onclick = function () {
-      var index = this.getAttribute('index');
+      index = this.getAttribute('index');
       for (var j = 0; j < as.length; j++) {
         as[j].classList.remove('active');
         as[index].classList.add('active');
@@ -388,30 +385,30 @@
       lineChart.setOption(option);
     }
   };
-
+  var timer = null;
+  var index = 0;
   var content7 = document.querySelector('.content7');
   var timeTab2 = document.querySelectorAll('.timeTab');
   function auto() {
 
     // 自动
-    var timer = null;
-    var ind = 0;
+
     timer = setInterval(function () {
-      ind++;
-      if (ind >= timeTab2.length) {
-        ind = 0;
+      index++;
+      if (index >= timeTab2.length) {
+        index = 0;
       }
-      as[ind].click();
+      as[index].click();
     }, 1500);
 
-    // 进入到第六模块自动切换暂停
-    // 找到第六模块元素
-    content7.onmouseenter = function () {
-      clearInterval(timer);
-    };
   };
   auto();
 
+  // 进入到第六模块自动切换暂停
+  // 找到第六模块元素
+  content7.onmouseenter = function () {
+    clearInterval(timer);
+  };
   content7.onmouseleave = function () {
     auto();
   }
