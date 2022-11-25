@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+html {
+  font-size: 80px;
+}
+html body {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  /* 模块1  */
+  /* 模块2 可视化大屏部分 */
+  /* 模块三 南丁格尔图部分 */
+  /* 模块四 中间地图部分 */
+  /* 模块五 柱形图部分 */
+  /* 模块六 自动切换 */
+  /* 模块七 季度自动切换 */
+  /* 模块八加模块九 */
+}
+html body .public {
+  border: 0.0125rem solid transparent;
+  border-image-source: url(../images/border.png);
+  border-width: 0.6375rem 0.475rem 0.25rem 1.65rem;
+  border-image-slice: 51 38 20 132;
+  position: relative;
+  margin-bottom: 0.3rem;
+}
+html body .public h3 {
+  font-size: 0.3rem;
+  color: #fff;
+  font-weight: 400;
+}
+html body .inner {
+  position: absolute;
+  top: -0.6375rem;
+  right: -0.475rem;
+  bottom: -0.25rem;
+  left: -1.65rem;
+  padding: 0.225rem 0.325rem;
+}
+html body .overall {
+  min-width: 1024px;
+  max-width: 1920px;
+  min-height: 10rem;
+  background: url(../images/logo.png) no-repeat;
+  background-size: contain;
+  display: flex;
+  padding: 1.2rem 0.4rem 0;
+}
+html body .overall .left,
+html body .overall .right {
+  flex: 3;
+}
+html body .overall .center {
+  flex: 4;
+  margin: 0.3rem 0.3rem 0;
+}
+html body .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 10px;
+  border-radius: 5px;
+  margin-right: 0.025rem;
+}
+html body .content1 {
+  height: 0.6rem;
+}
+html body .content1 ul {
+  display: flex;
+  justify-content: space-between;
+}
+html body .content1 ul h4 {
+  font-size: 0.36rem;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 0.06rem 0;
+}
+html body .content1 ul li {
+  display: flex;
+  flex-direction: column;
+  justify-items: start;
+}
+html body .content1 ul li span {
+  font-size: 0.2rem;
+  color: #4c9bfd;
+}
+html body .content2 {
+  height: 5rem;
+}
+html body .content2 .inner {
+  display: flex;
+  flex-direction: column;
+}
+html body .content2 .inner .tabs {
+  display: flex;
+  margin-bottom: 0.2rem;
+}
+html body .content2 .inner .tabs a {
+  color: #1950c4;
+  font-size: 0.32rem;
+}
+html body .content2 .inner .tabs .active {
+  color: #fff;
+}
+html body .content2 .inner .tabs .line {
+  display: inline-block;
+  width: 0.05rem;
+  height: 0.5rem;
+  background-color: aqua;
+  margin: 0 0.3rem;
+}
+html body .content2 .inner .content {
+  overflow: hidden;
+}
+html body .content2 .inner .content .top {
+  height: 0.56rem;
+  line-height: 0.56rem;
+  font-size: 0.3rem;
+  color: #68d8fe;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+html body .content2 .inner .content .row {
+  width: 100%;
+  font-size: 0.2rem;
+  display: flex;
+}
+html body .content2 .inner .content .row .col {
+  width: 1.7rem;
+}
+html body .content2 .inner .content .row .col:nth-of-type(2) {
+  width: 4rem;
+}
+html body .content2 .inner .content .message {
+  overflow: hidden;
+}
+html body .content2 .inner .content .messageScrool {
+  animation: go infinite 10s linear;
+}
+html body .content2 .inner .content .messageScrool .row {
+  line-height: 0.6rem;
+  color: #61a8ff;
+}
+html body .content2 .inner .content .messageScrool .row:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+html body .content2 .inner .content .messageScrool:hover {
+  animation-play-state: paused;
+}
+@keyframes go {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40%);
+  }
+}
+html body .content3 {
+  height: 3rem;
+}
+html body .content3 .chart {
+  display: flex;
+  justify-content: space-between;
+}
+html body .content3 .chart .pie {
+  flex: 3;
+}
+html body .content3 .chart .data {
+  height: 2.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.3rem 0.3rem;
+  box-sizing: border-box;
+  background: url(../images/rect.png);
+  background-size: cover;
+}
+html body .content3 .chart .data .item {
+  display: flex;
+  flex-direction: column;
+}
+html body .content3 .chart .data h4 {
+  font-size: 0.36rem;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 0.06rem 0;
+}
+html body .content3 .chart .data span {
+  font-size: 0.26rem;
+  color: #f8ab05;
+}
+html body .content4 .header {
+  display: flex;
+}
+html body .content4 .header h3 {
+  font-size: 0.28rem;
+  color: white;
+  font-weight: 400;
+  padding: 0.3rem 0 0.2rem 0;
+}
+html body .content4 .header span {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.1rem;
+  display: inline-block;
+  background: url(../images/shebei.png) no-repeat;
+  background-size: contain;
+  margin-top: 0.35rem;
+}
+html body .content4 .map {
+  height: 6.5rem;
+  margin-bottom: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+html body .content5 {
+  height: 3rem;
+}
+html body .content5 .chart {
+  display: flex;
+  justify-content: space-between;
+}
+html body .content5 .chart .bar {
+  flex: 5;
+}
+html body .content5 .chart .data {
+  height: 2.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.3rem 0.3rem;
+  box-sizing: border-box;
+  background: url(../images/rect.png);
+  background-size: cover;
+}
+html body .content5 .chart .data .item {
+  display: flex;
+  flex-direction: column;
+}
+html body .content5 .chart .data h4 {
+  font-size: 0.36rem;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 0.06rem 0;
+}
+html body .content5 .chart .data span {
+  font-size: 0.26rem;
+  color: #4cfde2;
+}
+html body .content6 {
+  height: 1rem;
+}
+html body .content6 .filter {
+  font-size: 0.25rem;
+}
+html body .content6 .filter .active {
+  color: white;
+  font-size: 0.29rem;
+}
+html body .content6 .filter a {
+  color: #1950c4;
+  margin-left: 0.2rem;
+  display: inline-block;
+  width: 1rem;
+  border-right: 0.02rem solid #00f2f1;
+}
+html body .content6 .filter a:nth-of-type(1) {
+  margin-left: 0;
+}
+html body .content6 .filter a:nth-of-type(4) {
+  border-right: none;
+}
+html body .content6 .data {
+  display: flex;
+}
+html body .content6 .data .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+html body .content6 .data .item h4 {
+  margin: 0.1rem 0;
+  font-size: 0.32rem;
+  color: white;
+}
+html body .content6 .data .item span {
+  font-size: 0.24rem;
+  color: #4c9bfd;
+}
+html body .content6 .orderDataHidden {
+  display: none;
+}
+html body .content7 {
+  height: 2.6rem;
+}
+html body .content7 .caption {
+  display: flex;
+}
+html body .content7 .caption h3 {
+  padding-right: 0.3rem;
+  border-right: 2px solid #00f2f1;
+}
+html body .content7 .caption a {
+  color: #0bace6;
+  font-size: 0.23rem;
+  margin: 0 0.2rem;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  text-align: center;
+  line-height: 0.4rem;
+}
+html body .content7 .caption .active {
+  color: white;
+  background-color: #4c9bfd;
+  border-radius: 0.1rem;
+}
+html body .content7 .chart {
+  font-size: 0.24rem;
+}
+html body .content7 .chart .linec {
+  width: 100%;
+  height: 2.6rem;
+}
+html body .two {
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  /* 模块八 */
+  /* 模块九 */
+}
+html body .two .content8 {
+  flex: 4;
+  margin-right: 0.2rem;
+}
+html body .two .content8 .radar {
+  width: 100%;
+  height: 1.8rem;
+}
+html body .two .content9 {
+  flex: 3;
+}
+html body .two .content9 .chart {
+  font-size: 0.26rem;
+}
+html body .two .content9 .chart .box {
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+}
+html body .two .content9 .chart .box .label {
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: white;
+}
+html body .two .content9 .chart .data {
+  display: flex;
+  justify-content: space-between;
+}
+html body .two .content9 .chart .data .item {
+  flex: 1;
+}
+html body .two .content9 .chart .data .item h4 {
+  font-size: 0.3rem;
+  color: white;
+}
+html body .two .content9 .chart .data .item span {
+  width: 1.3rem;
+  display: block;
+  font-size: 0.24rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4cfde2;
+}
+html body .content10 {
+  height: 2.2rem;
+}
+html body .content10 .chart {
+  display: flex;
+  justify-content: space-between;
+}
+html body .content10 .chart .water {
+  flex: 3;
+}
+html body .content10 .chart .data {
+  height: 2.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.3rem 0.3rem;
+  box-sizing: border-box;
+  background: url(../images/rect.png);
+  background-size: cover;
+}
+html body .content10 .chart .data .item {
+  display: flex;
+  flex-direction: column;
+}
+html body .content10 .chart .data h4 {
+  font-size: 0.32rem;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 0.06rem 0;
+}
+html body .content10 .chart .data span {
+  font-size: 0.26rem;
+  color: #f8ab05;
+}

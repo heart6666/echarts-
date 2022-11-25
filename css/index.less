@@ -1,0 +1,524 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  font-size: 80px;
+
+  body {
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+
+    .public {
+      border: .0125rem solid transparent;
+      border-image-source: url(../images/border.png);
+      border-width: 0.6375rem 0.475rem 0.25rem 1.65rem;
+      border-image-slice: 51 38 20 132;
+      position: relative;
+      margin-bottom: .3rem;
+
+      h3 {
+        font-size: 0.3rem;
+        color: #fff;
+        font-weight: 400;
+      }
+
+
+    }
+
+    .inner {
+      position: absolute;
+      top: -0.6375rem;
+      right: -0.475rem;
+      bottom: -0.25rem;
+      left: -1.65rem;
+      padding: 0.225rem 0.325rem;
+    }
+
+    .overall {
+      min-width: 1024px;
+      max-width: 1920px;
+      min-height: 10rem;
+      background: url(../images/logo.png) no-repeat;
+      background-size: contain;
+      display: flex;
+      padding: 1.2rem 0.4rem 0;
+
+      .left,
+      .right {
+        flex: 3;
+      }
+
+
+      .center {
+        flex: 4;
+        margin: .3rem .3rem 0;
+      }
+    }
+
+    .line {
+      display: inline-block;
+      width: 0.05rem;
+      height: 10px;
+      border-radius: 5px;
+      margin-right: 0.025rem;
+    }
+
+    /* 模块1  */
+    .content1 {
+      height: .6rem;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          font-size: .36rem;
+          font-weight: 400;
+          color: white;
+          margin: 0 0 0.06rem 0;
+        }
+
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-items: start;
+
+          span {
+            font-size: .2rem;
+            color: #4c9bfd;
+          }
+        }
+      }
+
+    }
+
+    /* 模块2 可视化大屏部分 */
+    .content2 {
+      height: 5rem;
+
+      .inner {
+        display: flex;
+        flex-direction: column;
+        // overflow: hidden;
+
+        .tabs {
+          display: flex;
+          margin-bottom: .2rem;
+
+          a {
+            color: #1950c4;
+            font-size: .32rem;
+          }
+
+          .active {
+            color: #fff;
+          }
+
+          .line {
+            display: inline-block;
+            width: .05rem;
+            height: .5rem;
+            background-color: aqua;
+            margin: 0 .3rem;
+          }
+        }
+
+        .content {
+          overflow: hidden;
+
+          .top {
+            height: .56rem;
+            line-height: .56rem;
+            font-size: .3rem;
+            color: #68d8fe;
+            background-color: rgba(255, 255, 255, 0.1);
+
+          }
+
+          .row {
+            width: 100%;
+            font-size: .2rem;
+            display: flex;
+
+            .col {
+
+              width: 1.7rem;
+
+              &:nth-of-type(2) {
+                width: 4rem;
+              }
+            }
+
+          }
+
+          .message {
+            overflow: hidden;
+          }
+
+          .messageScrool {
+            animation: go infinite 10s linear;
+
+
+            .row {
+              line-height: .6rem;
+              color: #61a8ff;
+            }
+
+            .row:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            &:hover {
+              animation-play-state: paused;
+            }
+          }
+
+        }
+
+        @keyframes go {
+          0% {
+            transform: translateY(0);
+          }
+
+          100% {
+            transform: translateY(-40%);
+          }
+        }
+      }
+
+    }
+
+    /* 模块三 南丁格尔图部分 */
+    .content3 {
+      height: 3rem;
+
+      .chart {
+        display: flex;
+        justify-content: space-between;
+
+        .pie {
+          flex: 3;
+        }
+
+        .data {
+          height: 2.8rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0.3rem .3rem;
+          box-sizing: border-box;
+          background: url(../images/rect.png);
+          background-size: cover;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+          }
+
+          h4 {
+            font-size: .36rem;
+            font-weight: 400;
+            color: white;
+            margin: 0 0 0.06rem 0;
+          }
+
+          span {
+            font-size: .26rem;
+            color: #f8ab05;
+          }
+        }
+      }
+    }
+
+    /* 模块四 中间地图部分 */
+    .content4 {
+
+      .header {
+        display: flex;
+
+        h3 {
+          font-size: .28rem;
+          color: white;
+          font-weight: 400;
+          padding: .3rem 0 .2rem 0;
+        }
+
+        span {
+          width: .3rem;
+          height: .3rem;
+          margin-right: .1rem;
+          display: inline-block;
+          background: url(../images/shebei.png) no-repeat;
+          background-size: contain;
+          margin-top: .35rem;
+        }
+      }
+
+      .map {
+        height: 6.5rem;
+        margin-bottom: .3rem;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+    }
+
+    /* 模块五 柱形图部分 */
+    .content5 {
+      height: 3rem;
+
+      .chart {
+        display: flex;
+        justify-content: space-between;
+
+        .bar {
+          flex: 5;
+        }
+
+        .data {
+          height: 2.8rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0.3rem .3rem;
+          box-sizing: border-box;
+          background: url(../images/rect.png);
+          background-size: cover;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+          }
+
+          h4 {
+            font-size: .36rem;
+            font-weight: 400;
+            color: white;
+            margin: 0 0 0.06rem 0;
+          }
+
+          span {
+            font-size: .26rem;
+            color: #4cfde2;
+          }
+        }
+      }
+    }
+
+    /* 模块六 自动切换 */
+    .content6 {
+      height: 1rem;
+
+      .filter {
+        font-size: .25rem;
+
+        .active {
+          color: white;
+          font-size: .29rem;
+        }
+
+
+
+        a {
+          color: #1950c4;
+          margin-left: .2rem;
+          display: inline-block;
+          width: 1rem;
+          border-right: 0.02rem solid #00f2f1;
+
+          &:nth-of-type(1) {
+            margin-left: 0;
+          }
+
+          &:nth-of-type(4) {
+            border-right: none;
+          }
+        }
+      }
+
+      .data {
+        display: flex;
+
+        .item {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          h4 {
+            margin: .1rem 0;
+            font-size: .32rem;
+            color: white;
+          }
+
+          span {
+            font-size: .24rem;
+            color: #4c9bfd;
+          }
+        }
+      }
+
+      .orderDataHidden {
+        display: none;
+      }
+    }
+
+    /* 模块七 季度自动切换 */
+    .content7 {
+      height: 2.6rem;
+
+      .caption {
+        display: flex;
+
+        h3 {
+          padding-right: .3rem;
+          border-right: 2px solid #00f2f1;
+        }
+
+        a {
+          color: #0bace6;
+          font-size: .23rem;
+          margin: 0 .2rem;
+          display: inline-block;
+          width: .4rem;
+          height: .4rem;
+          text-align: center;
+          line-height: .4rem;
+        }
+
+        .active {
+          color: white;
+          background-color: #4c9bfd;
+          border-radius: .1rem;
+        }
+      }
+
+      .chart {
+        font-size: .24rem;
+
+
+        .linec {
+          width: 100%;
+          height: 2.6rem;
+          // background-color: aquamarine;
+        }
+      }
+    }
+
+    /* 模块八加模块九 */
+    .two {
+      display: flex;
+      justify-content: space-between;
+      height: 3rem;
+
+      /* 模块八 */
+      .content8 {
+        flex: 4;
+        margin-right: .2rem;
+
+        .radar {
+          width: 100%;
+          height: 1.8rem;
+        }
+      }
+
+      /* 模块九 */
+      .content9 {
+        flex: 3;
+
+        .chart {
+          font-size: .26rem;
+
+          .box {
+            width: 100%;
+            height: 1rem;
+            text-align: center;
+            line-height: 1rem;
+
+            .label {
+              font-size: .5rem;
+              font-weight: 500;
+              color: white;
+            }
+          }
+
+          .data {
+            display: flex;
+            justify-content: space-between;
+
+            .item {
+              flex: 1;
+
+              h4 {
+                font-size: .3rem;
+                color: white;
+              }
+
+              span {
+                width: 1.3rem;
+                display: block;
+                font-size: .24rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: #4cfde2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content10 {
+      height: 2.2rem;
+
+      .chart {
+        display: flex;
+        justify-content: space-between;
+
+        .water {
+          flex: 3;
+        }
+
+        .data {
+          height: 2.2rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0.3rem .3rem;
+          box-sizing: border-box;
+          background: url(../images/rect.png);
+          background-size: cover;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+          }
+
+          h4 {
+            font-size: .32rem;
+            font-weight: 400;
+            color: white;
+            margin: 0 0 0.06rem 0;
+          }
+
+          span {
+            font-size: .26rem;
+            color: #f8ab05;
+          }
+        }
+      }
+    }
+  }
+}
